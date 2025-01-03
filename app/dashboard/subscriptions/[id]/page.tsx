@@ -1,7 +1,10 @@
 import Link from "next/link";
-import React from "react";
 
-const Subscription = async ({ params }: { params: { id: string } }) => {
+const Subscription = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
   const { id } = await params;
 
   return (
